@@ -1,0 +1,36 @@
+ <md-sidenav-container class="example-container ">
+
+    <md-sidenav #sidenav class="example-sidenav ">
+
+    
+      <button>Lien 1 </button>
+            <button>Lien 2 </button>
+
+    </md-sidenav>
+    <div class="example-sidenav-content">
+        <md-toolbar color="primary">
+            <button style="height: 50px;right: 550px" class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">X</i>
+    </button>
+            <md-chip-list style="margin-left: 100px">
+
+               <li>page 1</li><br>
+               <li>page 2</li>
+
+            </md-chip-list>
+           
+            
+
+        </md-toolbar></div>
+ </md-sidenav-container>
+
+
+ <md-input-container>
+  <input mdInput value="Disco party!" placeholder="Message" #message>
+</md-input-container>
+
+<md-input-container>
+  <input mdInput value="Dance" placeholder="Action" #action>
+</md-input-container>
+
+<button md-button (click)="openSnackBar(message.value, action.value)">Show snack-bar</button>
